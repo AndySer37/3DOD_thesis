@@ -25,7 +25,7 @@ def calibread(file_path):
     return out
 
 def LabelLoader2D3D(file_id, path, ext, calib_path, calib_ext):
-    labels = labelread(path + "/" + file_id + ext)
+    labels = labelread(path  + file_id + ext) #+ "/" + file_id + ext)
     calib = calibread(calib_path + "/" + file_id + calib_ext)
     polys = list()
     for bbox in labels:
